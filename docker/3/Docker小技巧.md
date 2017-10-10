@@ -96,3 +96,8 @@ entrypoint ["/init.sh", "/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.co
 删除没有用的镜像。 （有容器运行的镜像不会被删除）：
 
         docker rmi `docker images -aq`
+        
+## 命令小技巧
+- 删除所有停止的容器
+
+       docker ps -aq --no-trunc | xargs docker rm

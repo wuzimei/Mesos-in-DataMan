@@ -106,3 +106,5 @@ entrypoint ["/init.sh", "/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.co
 
       docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
       docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+      docker cp foo.txt mycontainer:/foo.txt
+      docker cp mycontainer:/foo.txt foo.txt

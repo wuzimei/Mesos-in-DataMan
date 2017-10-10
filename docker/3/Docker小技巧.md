@@ -101,3 +101,8 @@ entrypoint ["/init.sh", "/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.co
 - 删除所有停止的容器
 
        docker ps -aq --no-trunc | xargs docker rm
+       
+- 临时在宿主和容器之间拷贝文件
+
+      docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+      docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
